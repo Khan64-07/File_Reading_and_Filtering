@@ -1,0 +1,17 @@
+[project]
+name = "file-reading-and-filtering"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Khan64-07", email = "khhann0644@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+file-reading-and-filtering = "file_reading_and_filtering:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
