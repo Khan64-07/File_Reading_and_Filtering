@@ -15,3 +15,45 @@ file-reading-and-filtering = "file_reading_and_filtering:main"
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.ruff]
+# Longitud máxima de línea (estándar PEP8 / Black)
+line-length = 88
+
+# Carpetas y archivos excluidos del análisis
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+# Familias de reglas activas (por iniciales)
+select = [
+    "E",   # pycodestyle (errores PEP8)
+    "F",   # Pyflakes (variables/imports no usados o sintaxis inválida)
+    "I",   # isort (ordenamiento automático de imports)
+    "B",   # flake8-bugbear (patrones propensos a bugs)
+    "UP",  # pyupgrade (sugerencias para modernizar sintaxis)
+]
+
+# Reglas específicas ignoradas
+ignore = [
+    "E501", # Delegar el límite de longitud de línea al formateador
+    "B008", # Permitir llamadas a funciones en argumentos por defecto (útil para FastAPI)
+]
+
+[tool.ruff.lint.isort]
+# Agrupa las importaciones de un mismo paquete en una sola línea
+combine-as-imports = true
+
+[tool.ruff.format]
+# Configuración del formateador automático
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+
