@@ -43,6 +43,8 @@ select = [
 ignore = [
     "E501", # Delegar el límite de longitud de línea al formateador
     "B008", # Permitir llamadas a funciones en argumentos por defecto (útil para FastAPI)
+    "E731", # Permitir asignación directa de expresiones lambda 
+    "B904", # No obligar a usar 'raise ... from err' dentro de bloques except
 ]
 
 [tool.ruff.lint.isort]
