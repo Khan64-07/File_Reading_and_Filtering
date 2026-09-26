@@ -16,6 +16,11 @@ file-reading-and-filtering = "file_reading_and_filtering:main"
 requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
 
+[dependency-groups]
+dev = [
+    "ruff>=0.16.9",
+]
+
 [tool.ruff]
 # Longitud máxima de línea (estándar PEP8 / Black)
 line-length = 88
