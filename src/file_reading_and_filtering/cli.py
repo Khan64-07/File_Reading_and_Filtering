@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 
+from .cleaner import clean
 from .reader import readFiles
 
 
@@ -13,4 +14,12 @@ def main():
     parser.add_argument("route", type=Path)
     args = parser.parse_args()
 
-    print(readFiles(args.route))
+    readText = readFiles(
+        args.route
+    )  # This is the variable that stores the text in the .txt file itself(without any changes, just reads)
+    print(readText)
+
+    cleanText = clean(
+        readText
+    )  # This variable stores the .txt text filtered/cleaned(without puntuation, capitals, symbols, etc)
+    print(cleanText)
