@@ -7,8 +7,8 @@ from file_reading_and_filtering.cleaner import (
 
 
 def test_normalizeText():
-    assert normalizeText("caf\u00e9") == "café"  # é como un solo carácter (compuesto)
-    assert normalizeText("cafe\u0301") == "café"  # e + acento suelto (descompuesto)
+    assert normalizeText("caf\u00e9") == "café"  # é as one character
+    assert normalizeText("cafe\u0301") == "café"  # e + acentuation sign
 
 
 def test_loweText():
