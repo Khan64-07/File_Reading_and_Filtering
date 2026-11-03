@@ -16,8 +16,8 @@ def lowerText(text: str) -> str:
 # Function to remove punctuation from the text
 def removePunct(text: str) -> str:
     removePunct = [
-        c for c in text if c.isalpha() or c == " " or c == "'"
-    ]  # Only special charaters allowed are space and apostrophe
+        c for c in text if c.isalpha() or c == " " or c == "'" or c == "’"
+    ]  # Only special charaters allowed are space and apostrophe(' and ’)
     removedPunctText = "".join(removePunct)
     return removedPunctText
 
