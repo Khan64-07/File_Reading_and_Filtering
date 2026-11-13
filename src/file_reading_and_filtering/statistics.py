@@ -8,9 +8,11 @@ def totalWords(text: str) -> int:
 def avgWordLength(text: str) -> float:
     total = text.split()
     totalWords = len(total)
-    totalLenth = sum(len(word) for word in total)
-    avgLenth = totalLenth / totalWords
-    return avgLenth
+    totalLength = sum(
+        1 for word in total for letter in word if letter not in ["'", "’"]
+    )  # (this only ignores apostrophes(' and ’) in the word length count)
+    avgLength = totalLength / totalWords
+    return avgLength
 
 
 # Function to search a word in the text
