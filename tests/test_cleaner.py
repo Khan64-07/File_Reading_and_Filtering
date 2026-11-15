@@ -11,7 +11,7 @@ def test_normalizeText():
     assert normalizeText("cafe\u0301") == "café"  # e + acentuation sign
 
 
-def test_loweText():
+def test_lowerText():
     assert lowerText("Árbol") == "árbol"
 
 
